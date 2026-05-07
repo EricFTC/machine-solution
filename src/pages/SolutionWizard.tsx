@@ -48,8 +48,18 @@ export default function SolutionWizard() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitted(true);
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    const form = e.target as HTMLFormElement;
+    const data = new FormData(form);
+    
+    fetch("/", {
+      method: "POST",
+      body: data
+    })
+    .then(() => {
+      setIsSubmitted(true);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    })
+    .catch((error) => alert(error));
   };
 
   if (isSubmitted) {
@@ -87,7 +97,15 @@ export default function SolutionWizard() {
 
         {/* FORM SECTION */}
         <div className="bg-white border border-gray-200 rounded-xl shadow-sm overflow-hidden mb-16">
-          <form onSubmit={handleSubmit} className="p-8 md:p-12">
+          <form 
+            name="solution-request" 
+            method="POST" 
+            data-netlify="true" 
+            encType="multipart/form-data"
+            onSubmit={handleSubmit} 
+            className="p-8 md:p-12"
+          >
+            <input type="hidden" name="form-name" value="solution-request" />
             
             {/* Contact Info */}
             <div className="grid md:grid-cols-2 gap-6 mb-10">
@@ -95,6 +113,7 @@ export default function SolutionWizard() {
                 <label className="block text-sm font-bold text-gray-900 mb-2">Full Name *</label>
                 <input 
                   type="text" 
+                  name="name"
                   required
                   value={formData.name}
                   onChange={e => setFormData({...formData, name: e.target.value})}
@@ -105,6 +124,7 @@ export default function SolutionWizard() {
                 <label className="block text-sm font-bold text-gray-900 mb-2">Company *</label>
                 <input 
                   type="text" 
+                  name="company"
                   required
                   value={formData.company}
                   onChange={e => setFormData({...formData, company: e.target.value})}
@@ -115,6 +135,7 @@ export default function SolutionWizard() {
                 <label className="block text-sm font-bold text-gray-900 mb-2">Email *</label>
                 <input 
                   type="email" 
+                  name="email"
                   required
                   value={formData.email}
                   onChange={e => setFormData({...formData, email: e.target.value})}
@@ -130,6 +151,7 @@ export default function SolutionWizard() {
               <label className="block text-sm font-bold text-gray-900 mb-2">What part are you processing?</label>
               <textarea 
                 rows={3}
+                name="partType"
                 value={formData.partType}
                 onChange={e => setFormData({...formData, partType: e.target.value})}
                 placeholder="Example:&#10;- stainless steel tube&#10;- stamped bracket&#10;- aluminum panel&#10;- CNC machined part"
@@ -152,6 +174,8 @@ export default function SolutionWizard() {
                   >
                     <input 
                       type="checkbox" 
+                      name="problems"
+                      value={problem}
                       className="w-4 h-4 text-accent-orange focus:ring-accent-orange rounded border-gray-300"
                       checked={formData.problems.includes(problem)}
                       onChange={() => handleProblemChange(problem)}
@@ -167,6 +191,7 @@ export default function SolutionWizard() {
               <label className="block text-sm font-bold text-gray-900 mb-2">Additional process details</label>
               <textarea 
                 rows={5}
+                name="additionalDetails"
                 value={formData.additionalDetails}
                 onChange={e => setFormData({...formData, additionalDetails: e.target.value})}
                 placeholder="Examples:&#10;- current process&#10;- desired finish&#10;- production volume&#10;- Ra requirement&#10;- manual or automatic process"
@@ -184,6 +209,7 @@ export default function SolutionWizard() {
               >
                 <input 
                   type="file" 
+                  name="file"
                   className="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
                   onChange={e => {
                     if (e.target.files && e.target.files[0]) {

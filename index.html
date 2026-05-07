@@ -9,6 +9,23 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   </head>
   <body>
+    <!-- A little help for Netlify bots -->
+    <form name="solution-request" data-netlify="true" hidden enctype="multipart/form-data">
+      <input type="text" name="name" />
+      <input type="text" name="company" />
+      <input type="email" name="email" />
+      <textarea name="partType"></textarea>
+      <!-- Ensure the name is array-like or just 'problems' to store multiple values -->
+      <input type="checkbox" name="problems" value="Burr removal" />
+      <input type="checkbox" name="problems" value="Surface consistency" />
+      <input type="checkbox" name="problems" value="Mirror polishing" />
+      <input type="checkbox" name="problems" value="Scratch removal" />
+      <input type="checkbox" name="problems" value="Reduce manual labor" />
+      <input type="checkbox" name="problems" value="Increase production speed" />
+      <input type="checkbox" name="problems" value="Other" />
+      <textarea name="additionalDetails"></textarea>
+      <input type="file" name="file" />
+    </form>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
