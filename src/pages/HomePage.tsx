@@ -182,6 +182,34 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* SECTION 2.5 - ADVANCED SURFACE TECHNOLOGIES TEASER */}
+      <section className="py-20 bg-white border-b border-gray-200">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="bg-gray-50 border border-gray-200 rounded-xl overflow-hidden flex flex-col md:flex-row shadow-sm hover:shadow-md transition-shadow">
+            <div className="md:w-5/12 bg-gray-200 relative overflow-hidden h-64 md:h-auto">
+              <img 
+                src="/exploration-teaser.png"
+                alt="Advanced surface technologies exploration"
+                className="w-full h-full object-cover grayscale opacity-90 contrast-125 mix-blend-multiply"
+              />
+              <div className="absolute inset-0 bg-gradient-to-r from-gray-900/10 to-transparent pointer-events-none"></div>
+            </div>
+            <div className="md:w-7/12 p-8 md:p-12 flex flex-col justify-center">
+              <span className="block text-sm font-bold uppercase tracking-widest text-accent-orange mb-3">Process Development</span>
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 tracking-tight mb-4">Advanced Surface Technologies</h2>
+              <p className="text-gray-600 mb-8 leading-relaxed max-w-lg">
+                We continue exploring advanced finishing methods for hardened materials, precision molds, technical ceramics, and next-generation surface applications.
+              </p>
+              <div>
+                <Link to="/advanced-surface-technologies" className="inline-flex items-center gap-2 font-bold text-gray-900 border-b-2 border-accent-orange pb-1 hover:text-accent-orange transition-colors">
+                  Explore Technologies <ArrowRight className="w-4 h-4" />
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* SECTION 3 - REAL RESULT */}
       <section className="py-24 bg-gray-50 border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-6">

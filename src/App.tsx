@@ -3,6 +3,7 @@ import MainLayout from "./layouts/MainLayout";
 import HomePage from "./pages/HomePage";
 import SolutionWizard from "./pages/SolutionWizard";
 import CaseStudies from "./pages/CaseStudies";
+import AdvancedSurfaceTechnologies from "./pages/AdvancedSurfaceTechnologies";
 
 export default function App() {
   return (
@@ -12,6 +13,7 @@ export default function App() {
           <Route index element={<HomePage />} />
           <Route path="solution" element={<SolutionWizard />} />
           <Route path="cases" element={<CaseStudies />} />
+          <Route path="advanced-surface-technologies" element={<AdvancedSurfaceTechnologies />} />
           <Route path="deburring" element={<Navigate to="/" replace />} />
           <Route path="polishing" element={<Navigate to="/" replace />} />
           <Route path="processes" element={<Navigate to="/" replace />} />
