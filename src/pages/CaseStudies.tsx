@@ -6,6 +6,19 @@ import { PrimaryButton } from '../components/ui/Buttons';
 export default function CaseStudies() {
   const cases = [
     {
+      label: "Featured Case (Trending)",
+      title: "Non-directional scratch finish for Aluminum Heatsink plates",
+      partInfo: {
+        material: "Aluminum Alloy",
+        type: "Heatsink / Cooling Plate",
+        size: "Various sizes",
+      },
+      problem: "Increasing demand for premium aesthetic finishes and surface roughening for better adhesion on aluminum heatsinks. Traditional linear brushing leaves distinct directional lines that don't meet modern cosmetic standards and lacks sufficient roughness.",
+      solution: "Implemented an automated random orbital sanding (vibration sanding) line with customized abrasive media to create a uniform, non-directional matte scratch finish, serving both cosmetic and functional roughening purposes.",
+      result: "Achieved a premium, uniform 'frosted' scratch texture across the aluminum surface. Elevated the cosmetic appearance of the cooling components while maintaining high production throughput.",
+      image: "/488d5306a3afdfb8cecaf184ddef86c8.jpg"
+    },
+    {
       label: "Sample Case 01",
       title: "Precision milling and grinding for copper-aluminum alloy",
       partInfo: {
@@ -63,9 +76,6 @@ export default function CaseStudies() {
               {/* Image Column */}
               <div className="w-full lg:w-5/12">
                  <div className="bg-gray-100 rounded border border-gray-200 overflow-hidden relative shadow-sm aspect-[4/3]">
-                    <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 text-xs font-bold uppercase tracking-wider text-gray-700 border border-gray-200 rounded z-10 shadow-sm">
-                      {cs.label}
-                    </div>
                     <img src={cs.image} alt={cs.title} className="w-full h-full object-cover saturate-50 contrast-125" />
                  </div>
               </div>

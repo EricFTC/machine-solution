@@ -17,22 +17,18 @@ export default function HomePage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="inline-flex flex-wrap items-center gap-2 px-4 py-2 rounded-lg bg-orange-50 text-accent-orange text-xs md:text-sm font-bold uppercase tracking-wider border border-orange-100 mb-8"
+              className="inline-flex items-center px-4 py-1.5 rounded-full bg-orange-50 text-accent-orange text-sm font-bold tracking-widest uppercase border border-orange-100 mb-8"
             >
-              <span>Process Development</span>
-              <span className="hidden sm:inline opacity-50">&bull;</span>
-              <span>Manufacturing</span>
-              <span className="hidden sm:inline opacity-50">&bull;</span>
-              <span>Equipment Integration</span>
+              Process &bull; Production &bull; Equipment
             </motion.div>
             
             <motion.h1 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="text-4xl md:text-5xl lg:text-6xl font-black text-gray-900 leading-tight mb-6 tracking-tight max-w-4xl"
+              className="text-4xl md:text-5xl lg:text-6xl font-black text-gray-900 leading-tight mb-6 tracking-tight max-w-3xl"
             >
-              Surface Finishing Solutions<br className="hidden lg:block"/> From Process Development to Production
+              Solutions From Process Development to Production
             </motion.h1>
             
             <motion.div
@@ -41,10 +37,10 @@ export default function HomePage() {
               transition={{ duration: 0.5, delay: 0.2 }}
             >
               <p className="text-lg md:text-xl text-gray-600 mb-4 max-w-2xl leading-relaxed font-bold">
-                Send your part drawing, sample photo, or finishing challenge.
+                Send your drawing, sample photo, or application challenge.
               </p>
               <p className="text-lg text-gray-600 mb-8 max-w-2xl leading-relaxed">
-                We help manufacturers develop processes, source production capacity, and integrate equipment for deburring, grinding, polishing, mirror finishing, ultrasonic processing, and advanced surface technologies.
+                Whether you need process development, production support, or equipment recommendations, we help identify the most practical path forward.
               </p>
             </motion.div>
             
@@ -163,31 +159,82 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* NEW SECTION - TYPICAL PROJECT REQUESTS */}
+      {/* THE PROCESS-FIRST APPROACH */}
       <section className="py-24 bg-white border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="mb-20 text-center">
-            <h2 className="text-3xl md:text-5xl font-bold text-gray-900 tracking-tight mb-6">Typical Project Requests</h2>
-            <div className="w-20 h-1 bg-gray-300 mx-auto"></div>
-          </div>
+          <div className="flex flex-col lg:flex-row gap-16 items-center">
+            
+            {/* Left side: The Philosophy */}
+            <div className="lg:w-1/2">
+              <span className="block text-sm font-bold uppercase tracking-widest text-accent-orange mb-4">Our Methodology</span>
+              <h2 className="text-3xl md:text-5xl font-bold text-gray-900 tracking-tight mb-6 leading-tight">
+                Equipment and Production driven by <span className="text-accent-orange">Verified Processes.</span>
+              </h2>
+              <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+                We don't just sell machines from a catalog. Whether your goal is to purchase in-house equipment or outsource production, we start by engineering and validating the specific finishing process on your actual parts.
+              </p>
+              
+              <ul className="space-y-4 mb-10">
+                <li className="flex items-start gap-4">
+                  <div className="w-6 h-6 rounded-full bg-orange-50 text-accent-orange flex items-center justify-center shrink-0 mt-0.5">
+                    <CheckCircle2 className="w-4 h-4" />
+                  </div>
+                  <span className="text-gray-800 font-medium text-lg">Identify optimal media and cycle times</span>
+                </li>
+                <li className="flex items-start gap-4">
+                   <div className="w-6 h-6 rounded-full bg-orange-50 text-accent-orange flex items-center justify-center shrink-0 mt-0.5">
+                    <CheckCircle2 className="w-4 h-4" />
+                  </div>
+                  <span className="text-gray-800 font-medium text-lg">Validate surface finishes (Ra/Rz metrics)</span>
+                </li>
+                <li className="flex items-start gap-4">
+                   <div className="w-6 h-6 rounded-full bg-orange-50 text-accent-orange flex items-center justify-center shrink-0 mt-0.5">
+                    <CheckCircle2 className="w-4 h-4" />
+                  </div>
+                  <span className="text-gray-800 font-medium text-lg">Eliminate capital investment risks</span>
+                </li>
+              </ul>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              "We need parts finished and delivered",
-              "We need to replace manual polishing",
-              "We need mirror finish on hardened steel",
-              "We need a process for zirconia or technical ceramics",
-              "We need to automate a finishing process",
-              "We need equipment and process support"
-            ].map((quote, idx) => (
-              <Link to="/contact" key={idx} className="block p-8 border border-gray-200 bg-gray-50 rounded-xl hover:border-accent-orange hover:bg-white transition-all group">
-                <MessageSquare className="w-6 h-6 text-gray-400 mb-4 group-hover:text-accent-orange transition-colors" />
-                <p className="text-lg font-medium text-gray-800 leading-snug mb-6">"{quote}"</p>
-                <span className="text-sm font-bold text-gray-500 uppercase tracking-widest group-hover:text-accent-orange transition-colors flex items-center gap-1">
-                  Start Consultation <ArrowRight className="w-4 h-4" />
-                </span>
+              <Link to="/contact" className="inline-flex items-center text-lg font-bold text-gray-900 border-b-2 border-gray-900 pb-1 hover:text-accent-orange hover:border-accent-orange transition-colors">
+                Start with a Process Review <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
-            ))}
+            </div>
+
+            {/* Right side: The Outcomes */}
+            <div className="lg:w-1/2 w-full">
+              <div className="bg-gray-50 border border-gray-200 rounded-2xl p-8 md:p-10">
+                <h3 className="text-xl font-bold text-gray-900 mb-6 border-b border-gray-200 pb-4">After Process Validation, We Deliver:</h3>
+                
+                <div className="space-y-4">
+                  <div className="bg-white p-6 rounded-xl border border-gray-100 shadow-sm flex gap-5 items-start group">
+                    <div className="w-14 h-14 bg-gray-50 rounded-lg flex items-center justify-center shrink-0 group-hover:bg-orange-50 group-hover:text-accent-orange transition-colors">
+                      <Settings className="w-7 h-7 text-gray-600 group-hover:text-accent-orange" />
+                    </div>
+                    <div>
+                      <h4 className="text-lg font-bold text-gray-900 mb-2">1. Equipment Integration</h4>
+                      <p className="text-gray-600 leading-relaxed text-sm">Turnkey standalone machines or automated lines configured exactly to the validated process.</p>
+                      <Link to="/services/equipment-solutions" className="inline-block mt-3 text-sm font-bold text-gray-500 uppercase tracking-widest group-hover:text-accent-orange transition-colors">
+                        Explore Equipment &rarr;
+                      </Link>
+                    </div>
+                  </div>
+
+                  <div className="bg-white p-6 rounded-xl border border-gray-100 shadow-sm flex gap-5 items-start group">
+                    <div className="w-14 h-14 bg-gray-50 rounded-lg flex items-center justify-center shrink-0 group-hover:bg-orange-50 group-hover:text-accent-orange transition-colors">
+                      <Factory className="w-7 h-7 text-gray-600 group-hover:text-accent-orange" />
+                    </div>
+                    <div>
+                      <h4 className="text-lg font-bold text-gray-900 mb-2">2. Contract Manufacturing</h4>
+                      <p className="text-gray-600 leading-relaxed text-sm">Don't want to buy equipment? We process your prototypes or high-volume production orders.</p>
+                      <Link to="/services/manufacturing-validation" className="inline-block mt-3 text-sm font-bold text-gray-500 uppercase tracking-widest group-hover:text-accent-orange transition-colors">
+                        Explore Production &rarr;
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
       </section>
@@ -334,17 +381,22 @@ export default function HomePage() {
           
           <div className="bg-white border border-gray-200 rounded-xl shadow-md overflow-hidden flex flex-col md:flex-row group transition-all duration-300">
             <div className="md:w-1/2 overflow-hidden bg-gray-100 relative">
-              <img src="/8cf89a17-e9ed-4817-aeec-a018d36a3519.png" alt="Featured Case Result" className="w-full h-full object-cover grayscale opacity-90 transition-transform duration-700 group-hover:scale-105" />
+              <img src="/488d5306a3afdfb8cecaf184ddef86c8.jpg" alt="Featured Case Result" className="w-full h-full object-cover opacity-90 transition-transform duration-700 group-hover:scale-105" />
             </div>
             <div className="md:w-1/2 p-10 md:p-14 flex flex-col justify-center">
               <div className="mb-8">
+                <span className="block text-sm font-bold uppercase tracking-widest text-gray-400 mb-2">Application</span>
+                <h3 className="text-xl font-medium text-gray-900 leading-snug">Aluminum Heatsinks / Cooling Plates</h3>
+              </div>
+
+              <div className="mb-8">
                 <span className="block text-sm font-bold uppercase tracking-widest text-gray-500 mb-2">Problem</span>
-                <h3 className="text-xl font-medium text-gray-900 leading-snug">High manual labor required to remove sharp burrs and inconsistent edges after CNC machining.</h3>
+                <p className="text-lg text-gray-700 leading-snug">Increasing demand for premium aesthetic finishes and surface roughening for better adhesion. Traditional linear brushing leaves distinct directional lines and doesn't provide adequate surface roughness.</p>
               </div>
               
               <div className="mb-8">
                 <span className="block text-sm font-bold uppercase tracking-widest text-gray-500 mb-2">Process</span>
-                <p className="text-lg text-gray-700 leading-snug">Engineering evaluation of abrasive media resulting in an automated multi-head deburring process.</p>
+                <p className="text-lg text-gray-700 leading-snug">Implemented automated random orbital sanding (vibration sanding) with customized abrasive media for both decoration and roughening.</p>
               </div>
 
               <div className="pt-8 border-t border-gray-100">
@@ -352,11 +404,11 @@ export default function HomePage() {
                 <ul className="space-y-4 text-lg text-gray-900 font-bold">
                   <li className="flex items-start gap-3">
                     <Check className="w-6 h-6 text-accent-orange mt-0.5 shrink-0 stroke-[3]" /> 
-                    <span>Improved edge consistency</span>
+                    <span>Premium, uniform "frosted" texture</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <Check className="w-6 h-6 text-accent-orange mt-0.5 shrink-0 stroke-[3]" /> 
-                    <span>60% less manual finishing time</span>
+                    <span>Non-directional scratch finish</span>
                   </li>
                 </ul>
               </div>
