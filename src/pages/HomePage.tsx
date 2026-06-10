@@ -17,28 +17,36 @@ export default function HomePage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="inline-flex items-center px-3 py-1 rounded bg-orange-50 text-accent-orange text-sm font-bold tracking-wider uppercase border border-orange-100 mb-6"
+              className="inline-flex flex-wrap items-center gap-2 px-4 py-2 rounded-lg bg-orange-50 text-accent-orange text-xs md:text-sm font-bold uppercase tracking-wider border border-orange-100 mb-8"
             >
-              Surface Finishing Integrator
+              <span>Process Development</span>
+              <span className="hidden sm:inline opacity-50">&bull;</span>
+              <span>Manufacturing</span>
+              <span className="hidden sm:inline opacity-50">&bull;</span>
+              <span>Equipment Integration</span>
             </motion.div>
             
             <motion.h1 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="text-4xl md:text-5xl lg:text-6xl font-black text-gray-900 leading-tight mb-6 tracking-tight"
+              className="text-4xl md:text-5xl lg:text-6xl font-black text-gray-900 leading-tight mb-6 tracking-tight max-w-4xl"
             >
-              Surface Finishing Process & Equipment Solutions
+              Surface Finishing Solutions<br className="hidden lg:block"/> From Process Development to Production
             </motion.h1>
             
-            <motion.p 
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="text-lg md:text-xl text-gray-600 mb-8 max-w-2xl leading-relaxed"
             >
-              From process development and production validation to equipment selection and automation integration. Send us your part drawing, photo, or finishing challenge and receive a practical recommendation.
-            </motion.p>
+              <p className="text-lg md:text-xl text-gray-600 mb-4 max-w-2xl leading-relaxed font-bold">
+                Send your part drawing, sample photo, or finishing challenge.
+              </p>
+              <p className="text-lg text-gray-600 mb-8 max-w-2xl leading-relaxed">
+                We help manufacturers develop processes, source production capacity, and integrate equipment for deburring, grinding, polishing, mirror finishing, ultrasonic processing, and advanced surface technologies.
+              </p>
+            </motion.div>
             
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
@@ -47,13 +55,13 @@ export default function HomePage() {
               className="flex flex-col sm:flex-row gap-4 mb-4"
             >
               <Link to="/contact" className="flex-1 sm:flex-none">
-                <PrimaryButton className="w-full text-lg shadow-md px-8">
+                <PrimaryButton className="w-full text-lg shadow-md px-8 py-4 h-auto">
                   Get Process Recommendation
                 </PrimaryButton>
               </Link>
               <Link to="/contact" className="flex-1 sm:flex-none">
-                <SecondaryButton className="w-full text-lg border-2">
-                  <Upload className="w-5 h-5" /> Submit Your Part
+                <SecondaryButton className="w-full text-lg border-2 py-4 h-auto">
+                  <Upload className="w-5 h-5 mr-2" /> Submit Your Part
                 </SecondaryButton>
               </Link>
             </motion.div>
@@ -62,10 +70,11 @@ export default function HomePage() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.5 }}
-              className="flex items-center gap-4 text-sm text-gray-500 font-medium mt-6"
+              className="flex flex-col sm:flex-row flex-wrap sm:items-center gap-x-6 gap-y-3 text-sm text-gray-500 font-bold mt-8"
             >
-              <span className="flex items-center gap-1"><CheckCircle2 className="w-4 h-4 text-accent-orange" /> Start with your part</span>
-              <span className="flex items-center gap-1"><CheckCircle2 className="w-4 h-4 text-accent-orange" /> Engineering evaluation</span>
+              <span className="flex items-center gap-1.5"><CheckCircle2 className="w-4 h-4 text-accent-orange" /> Engineering review within 24 hours</span>
+              <span className="flex items-center gap-1.5"><CheckCircle2 className="w-4 h-4 text-accent-orange" /> Global manufacturing network</span>
+              <span className="flex items-center gap-1.5"><CheckCircle2 className="w-4 h-4 text-accent-orange" /> Process-first approach</span>
             </motion.div>
           </div>
 
@@ -89,59 +98,87 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="mb-20 text-center">
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 tracking-tight mb-6">How We Support Your Project</h2>
-            <div className="w-20 h-1 bg-accent-orange mx-auto"></div>
+            <div className="w-20 h-1 bg-accent-orange mx-auto mb-6"></div>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">Choose the level of support you need.</p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-white p-10 border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow">
-              <div className="w-14 h-14 bg-gray-100 border border-gray-200 rounded-lg flex items-center justify-center text-gray-700 mb-6">
+          <div className="grid lg:grid-cols-3 gap-8">
+            <div className="bg-white p-10 border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col group">
+              <div className="w-14 h-14 bg-gray-100 border border-gray-200 rounded-lg flex items-center justify-center text-gray-700 mb-6 group-hover:bg-orange-50 group-hover:text-accent-orange transition-colors">
                 <Lightbulb className="w-7 h-7" />
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Process Consulting</h3>
-              <p className="text-gray-600 leading-relaxed">
-                Analyze parts, materials, and finishing requirements. Receive practical process recommendations tailored to your production goals, not just a machine spec.
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Process Development</h3>
+              <p className="text-gray-600 leading-relaxed mb-8 flex-grow">
+                Develop and validate surface finishing processes before production.
               </p>
+              <ul className="space-y-3 mb-10 text-gray-700 font-medium">
+                <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-accent-orange" /> Process analysis</li>
+                <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-accent-orange" /> Sample testing</li>
+                <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-accent-orange" /> Parameter development</li>
+                <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-accent-orange" /> Production feasibility review</li>
+              </ul>
+              <Link to="/services/process-consulting" className="inline-flex items-center font-bold text-sm tracking-widest uppercase text-gray-500 group-hover:text-accent-orange transition-colors mt-auto">
+                Discuss Process <ArrowRight className="w-4 h-4 ml-2" />
+              </Link>
             </div>
             
-            <div className="bg-white p-10 border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow">
-              <div className="w-14 h-14 bg-gray-100 border border-gray-200 rounded-lg flex items-center justify-center text-gray-700 mb-6">
+            <div className="bg-white p-10 border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col group">
+              <div className="w-14 h-14 bg-gray-100 border border-gray-200 rounded-lg flex items-center justify-center text-gray-700 mb-6 group-hover:bg-orange-50 group-hover:text-accent-orange transition-colors">
                 <TestTube className="w-7 h-7" />
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Manufacturing Validation</h3>
-              <p className="text-gray-600 leading-relaxed">
-                Prototype testing, process verification, and production evaluation before investment. Ensure the finishing process works consistently on your actual parts.
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Contract Manufacturing</h3>
+              <p className="text-gray-600 leading-relaxed mb-8 flex-grow">
+                Access qualified production resources for prototypes and production orders.
               </p>
+              <ul className="space-y-3 mb-10 text-gray-700 font-medium">
+                <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-accent-orange" /> Prototype production</li>
+                <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-accent-orange" /> Small batch manufacturing</li>
+                <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-accent-orange" /> Production sourcing</li>
+                <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-accent-orange" /> Quality verification</li>
+              </ul>
+              <Link to="/services/manufacturing-validation" className="inline-flex items-center font-bold text-sm tracking-widest uppercase text-gray-500 group-hover:text-accent-orange transition-colors mt-auto">
+                Request Manufacturing Support <ArrowRight className="w-4 h-4 ml-2" />
+              </Link>
             </div>
 
-            <div className="bg-white p-10 border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow border-t-4 border-t-accent-orange">
+            <div className="bg-white p-10 border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col group border-t-4 border-t-accent-orange">
               <div className="w-14 h-14 bg-orange-50 border border-orange-100 rounded-lg flex items-center justify-center text-accent-orange mb-6">
                 <Factory className="w-7 h-7" />
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Equipment Solutions</h3>
-              <p className="text-gray-600 leading-relaxed">
-                Scale successful processes into production through equipment integration and automation. We provide the right machinery matched to the validated process.
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Equipment Integration</h3>
+              <p className="text-gray-600 leading-relaxed mb-8 flex-grow">
+                Build in-house finishing capability with verified equipment solutions.
               </p>
+              <ul className="space-y-3 mb-10 text-gray-700 font-medium">
+                <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-accent-orange" /> Equipment recommendation</li>
+                <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-accent-orange" /> Supplier coordination</li>
+                <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-accent-orange" /> Automation integration</li>
+                <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-accent-orange" /> Technical support</li>
+              </ul>
+              <Link to="/services/equipment-solutions" className="inline-flex items-center font-bold text-sm tracking-widest uppercase text-gray-500 group-hover:text-accent-orange transition-colors mt-auto">
+                Explore Equipment Solutions <ArrowRight className="w-4 h-4 ml-2" />
+              </Link>
             </div>
           </div>
         </div>
       </section>
 
-      {/* NEW SECTION - WHY CUSTOMERS CONTACT US */}
+      {/* NEW SECTION - TYPICAL PROJECT REQUESTS */}
       <section className="py-24 bg-white border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-6">
           <div className="mb-20 text-center">
-            <h2 className="text-3xl md:text-5xl font-bold text-gray-900 tracking-tight mb-6">Why Customers Contact Us</h2>
+            <h2 className="text-3xl md:text-5xl font-bold text-gray-900 tracking-tight mb-6">Typical Project Requests</h2>
             <div className="w-20 h-1 bg-gray-300 mx-auto"></div>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              "We spend too much time on manual polishing.",
-              "We are not sure which process to use.",
-              "We need better surface consistency.",
-              "We want to automate finishing operations.",
-              "We need mirror finish on hardened materials.",
-              "We need to reduce sharp edge rejects."
+              "We need parts finished and delivered",
+              "We need to replace manual polishing",
+              "We need mirror finish on hardened steel",
+              "We need a process for zirconia or technical ceramics",
+              "We need to automate a finishing process",
+              "We need equipment and process support"
             ].map((quote, idx) => (
               <Link to="/contact" key={idx} className="block p-8 border border-gray-200 bg-gray-50 rounded-xl hover:border-accent-orange hover:bg-white transition-all group">
                 <MessageSquare className="w-6 h-6 text-gray-400 mb-4 group-hover:text-accent-orange transition-colors" />
@@ -161,7 +198,8 @@ export default function HomePage() {
           <div className="mb-20 text-center">
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 tracking-tight mb-6">Process Engineering Solutions</h2>
             <div className="w-20 h-1 bg-accent-orange mx-auto"></div>
-            <p className="text-lg text-gray-600 mt-6 max-w-2xl mx-auto">Focusing on resolving specific manufacturing challenges through validated processes.</p>
+            <p className="text-lg text-gray-600 mt-6 max-w-2xl mx-auto font-bold">Common finishing challenges we solve.</p>
+            <p className="text-lg text-gray-600 mt-4 max-w-2xl mx-auto">Focusing on resolving specific manufacturing challenges through validated processes.</p>
           </div>
           
           <div className="space-y-12">
@@ -269,8 +307,11 @@ export default function HomePage() {
             <div className="md:w-7/12 p-8 md:p-12 flex flex-col justify-center">
               <span className="block text-sm font-bold uppercase tracking-widest text-accent-orange mb-3">Long-Term Engineering</span>
               <h2 className="text-2xl md:text-3xl font-bold text-gray-900 tracking-tight mb-4">Advanced Surface Technologies</h2>
-              <p className="text-gray-600 mb-8 leading-relaxed max-w-lg">
-                Areas we are actively researching and evaluating. We continue exploring advanced finishing methods for hardened materials, precision molds, technical ceramics, and next-generation surface applications.
+              <p className="text-gray-600 mb-4 leading-relaxed max-w-lg font-medium">
+                These are emerging capabilities under active engineering development and validation.
+              </p>
+              <p className="text-gray-600 mb-8 leading-relaxed max-w-lg text-sm">
+                Current exploration areas include ultrasonic-assisted finishing, laser surface processing, and hard and brittle material finishing.
               </p>
               <div>
                 <Link to="/advanced-surface-technologies" className="inline-flex items-center gap-2 font-bold text-gray-900 border-b-2 border-accent-orange pb-1 hover:text-accent-orange transition-colors">
@@ -286,8 +327,9 @@ export default function HomePage() {
       <section className="py-24 bg-gray-50 border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-6">
           <div className="mb-20 text-center">
-            <h2 className="text-3xl md:text-5xl font-bold text-gray-900 tracking-tight mb-6">Industrial Cases</h2>
-            <div className="w-20 h-1 bg-accent-orange mx-auto"></div>
+            <h2 className="text-3xl md:text-5xl font-bold text-gray-900 tracking-tight mb-6">Verified Engineering Cases</h2>
+            <div className="w-20 h-1 bg-accent-orange mx-auto mb-6"></div>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">Examples of process improvement and production results.</p>
           </div>
           
           <div className="bg-white border border-gray-200 rounded-xl shadow-md overflow-hidden flex flex-col md:flex-row group transition-all duration-300">
@@ -329,18 +371,52 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* SECTION 7 - HOW WE WORK */}
+      <section className="py-24 bg-white border-b border-gray-200">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="mb-20 text-center">
+            <h2 className="text-3xl md:text-5xl font-bold text-gray-900 tracking-tight mb-6">How We Work</h2>
+            <div className="w-20 h-1 bg-gray-300 mx-auto"></div>
+          </div>
+          
+          <div className="grid md:grid-cols-4 gap-8 relative">
+            <div className="hidden md:block absolute top-[44px] left-[15%] right-[15%] h-0.5 bg-gray-200 z-0"></div>
+            
+            {[
+              { title: "Submit Drawing or Part Photo", icon: <Upload className="w-6 h-6" /> },
+              { title: "Engineering Review", icon: <CodeSquare className="w-6 h-6" /> },
+              { title: "Process Recommendation", icon: <CheckCircle2 className="w-6 h-6" /> },
+              { title: "Production or Equipment Solution", icon: <Factory className="w-6 h-6" /> }
+            ].map((step, idx) => (
+              <div key={idx} className="relative z-10 flex flex-col items-center text-center">
+                <div className="w-24 h-24 rounded-full bg-white border-4 border-gray-100 shadow-sm flex items-center justify-center text-accent-orange mb-6 text-2xl font-black">
+                  {idx + 1}
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">{step.title}</h3>
+                <div className="text-gray-400 mt-2">{step.icon}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* FINAL CTA */}
-      <section className="py-24 bg-white relative border-b border-gray-200">
+      <section className="py-24 bg-gray-50 relative border-b border-gray-200">
         <div className="max-w-4xl mx-auto px-6 text-center">
-          <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6 tracking-tight">Ready to improve your surface finishing process?</h2>
+          <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6 tracking-tight">Need Help With a Surface Finishing Challenge?</h2>
           <p className="text-xl text-gray-600 mb-12 max-w-2xl mx-auto">
-            Send your part drawing, photo, or material block. Get a process recommendation verified by our engineering team within 24 hours.
+            Whether you need a process, production support, or equipment solution, start by sending us your drawing or application details.
           </p>
           <div className="flex flex-col items-center justify-center gap-4">
-            <Link to="/contact">
-              <PrimaryButton className="h-16 px-12 text-xl shadow-md w-full sm:w-auto hover:shadow-lg transition-transform hover:-translate-y-1">
-                Tell Us About Your Part
+            <Link to="/contact" className="w-full sm:w-auto">
+              <PrimaryButton className="h-16 px-12 text-xl shadow-md w-full hover:shadow-lg transition-transform hover:-translate-y-1">
+                Submit Your Project
               </PrimaryButton>
+            </Link>
+            <Link to="/contact" className="w-full sm:w-auto mt-2">
+              <SecondaryButton className="px-8 border-2 w-full">
+                Contact Engineering Team
+              </SecondaryButton>
             </Link>
           </div>
         </div>
