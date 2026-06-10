@@ -19,7 +19,11 @@ export default function MainLayout() {
   const location = useLocation();
 
   const navLinks = [
+    { name: "Solutions", path: "/solutions" },
+    { name: "Services", path: "/services" },
     { name: "Cases", path: "/cases" },
+    { name: "Knowledge Center", path: "/knowledge" },
+    { name: "Exploration", path: "/advanced-surface-technologies" },
   ];
 
   return (
@@ -30,7 +34,7 @@ export default function MainLayout() {
             <Cog className="w-8 h-8 text-accent-orange" />
             Integrator<span className="text-accent-orange">.</span>
           </Link>
-          <div className="hidden md:flex gap-8 items-center font-medium text-sm text-gray-500">
+          <div className="hidden lg:flex gap-8 items-center font-medium text-sm text-gray-500">
             {navLinks.map((link) => (
               <Link 
                 key={link.path} 
@@ -44,10 +48,10 @@ export default function MainLayout() {
               </Link>
             ))}
             <Link 
-              to="/solution" 
+              to="/contact" 
               className="bg-accent-orange hover:bg-accent-orange-hover text-white font-bold py-2 px-6 rounded transition-colors !text-sm"
             >
-              Get Solution
+              Contact
             </Link>
           </div>
         </div>
@@ -64,8 +68,10 @@ export default function MainLayout() {
             Process Integrator
           </div>
           <div className="flex gap-6 text-sm">
-            <Link to="/solution" className="hover:text-gray-900">Get Solution</Link>
+            <Link to="/solutions" className="hover:text-gray-900">Solutions</Link>
+            <Link to="/services" className="hover:text-gray-900">Services</Link>
             <Link to="/cases" className="hover:text-gray-900">Cases</Link>
+            <Link to="/contact" className="hover:text-gray-900">Contact</Link>
           </div>
           <p className="text-sm md:border-l md:border-gray-300 md:pl-6">&copy; {new Date().getFullYear()} Industrial Solutions.</p>
         </div>

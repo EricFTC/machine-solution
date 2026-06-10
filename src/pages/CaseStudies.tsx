@@ -124,8 +124,8 @@ export default function CaseStudies() {
             Send us your part drawing or description. We'll identify the correct process and provide an equipment recommendation.
           </p>
           <div className="flex flex-col items-center gap-3">
-            <Link to="/solution">
-              <PrimaryButton className="px-8 shadow-sm text-lg">Request Process Review <ArrowRight className="w-5 h-5 ml-2"/></PrimaryButton>
+            <Link to="/contact">
+              <PrimaryButton className="px-8 shadow-sm text-lg">Request Process Recommendation <ArrowRight className="w-5 h-5 ml-2"/></PrimaryButton>
             </Link>
             <span className="text-sm text-gray-500 font-medium">Response within 24 hours</span>
           </div>

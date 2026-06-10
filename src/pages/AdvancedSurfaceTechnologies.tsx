@@ -176,7 +176,7 @@ export default function AdvancedSurfaceTechnologies() {
           <p className="text-xl text-gray-600 mb-12 leading-relaxed">
             Send your part drawing, material details, or finishing challenge for engineering evaluation.
           </p>
-          <PrimaryButton onClick={() => window.location.href = '/solution'} className="px-12 py-5 h-auto text-lg hover:-translate-y-1 shadow-md hover:shadow-lg transition-transform">
+          <PrimaryButton onClick={() => window.location.href = '/contact'} className="px-12 py-5 h-auto text-lg hover:-translate-y-1 shadow-md hover:shadow-lg transition-transform">
             Discuss Your Application <ArrowRight className="w-5 h-5 ml-2" />
           </PrimaryButton>
         </div>
