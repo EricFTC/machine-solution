@@ -322,7 +322,7 @@ export default function HomePage() {
                     </div>
                     <div>
                       <span className="block text-xs font-bold uppercase tracking-widest text-accent-orange mb-2">Typical Result</span>
-                      <p className="text-gray-800 font-bold">High Ra reduction, Ra &lt; 0.05μm, brilliant cosmetic appearance.</p>
+                      <p className="text-gray-800 font-bold">Significant Ra improvement, high-quality mirror appearance. Specific finish levels validated per application.</p>
                     </div>
                   </div>
                 </div>

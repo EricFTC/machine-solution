@@ -98,7 +98,7 @@ export default function ManufacturingServicesPage() {
                   <div className="w-8 h-8 rounded bg-gray-100 flex items-center justify-center shrink-0 mt-0.5"><CheckCircle2 className="w-5 h-5 text-gray-700" /></div>
                   <div>
                     <h4 className="font-bold text-gray-900 mb-1">Polishing & Mirror Finishing</h4>
-                    <p className="text-sm text-gray-600 leading-relaxed">Reducing Ra values down to &lt;0.05μm for cosmetic or functional high-reflectivity requirements.</p>
+                    <p className="text-sm text-gray-600 leading-relaxed">Significantly reducing Ra values for cosmetic or functional high-reflectivity requirements.</p>
                   </div>
                 </div>
                 <div className="bg-white border border-gray-200 p-6 rounded-lg flex items-start gap-4">
