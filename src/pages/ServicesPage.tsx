@@ -1,10 +1,17 @@
 import React from 'react';
+import SEO from '../components/SEO';
 import { ArrowRight, Lightbulb, TestTube, Factory } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function ServicesPage() {
   return (
     <div className="bg-gray-50 min-h-screen py-24">
+      <SEO
+        title="Engineering Services — Process Consulting, Manufacturing & Equipment"
+        description="Full-spectrum metal finishing engineering services: process consulting, manufacturing validation with sample testing, and equipment integration. From process development to production automation."
+        canonical="/services"
+        keywords="metal finishing consulting, manufacturing validation, equipment integration, surface finishing services, process development"
+      />
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-20">
           <h1 className="text-4xl md:text-6xl font-bold tracking-tight text-gray-900 mb-6">Engineering Services</h1>

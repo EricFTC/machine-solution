@@ -1,3 +1,4 @@
+import SEO from '../components/SEO';
 import React from 'react';
 import { motion } from 'motion/react';
 import { ArrowRight, Upload, Cog, CheckCircle2, MessageSquare, Sparkles, CodeSquare, Check, TestTube, Lightbulb, Settings, Factory } from 'lucide-react';

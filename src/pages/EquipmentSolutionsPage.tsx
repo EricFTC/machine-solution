@@ -1,4 +1,5 @@
 import React from 'react';
+import SEO from '../components/SEO';
 import { ArrowRight, Layers, Cog, Globe, CheckCircle2, Factory } from 'lucide-react';
 import { PrimaryButton } from '../components/ui/Buttons';
 import { Link } from 'react-router-dom';

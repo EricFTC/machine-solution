@@ -1,4 +1,5 @@
 import React from 'react';
+import SEO from '../components/SEO';
 import { ArrowRight } from 'lucide-react';
 import { PrimaryButton } from '../components/ui/Buttons';
 

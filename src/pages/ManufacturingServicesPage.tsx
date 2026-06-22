@@ -1,4 +1,5 @@
 import React from 'react';
+import SEO from '../components/SEO';
 import { ArrowRight, TestTube, Factory, Settings2, CheckCircle2, ShieldCheck, Gem } from 'lucide-react';
 import { PrimaryButton } from '../components/ui/Buttons';
 import { Link } from 'react-router-dom';
@@ -53,6 +54,12 @@ export default function ManufacturingServicesPage() {
             </div>
             
             <div className="bg-gray-50 border border-gray-200 p-8 rounded-xl hover:border-gray-300 transition-colors">
+      <SEO
+        title="Process Validation & Testing — Sample Processing & Prototype Finishing"
+        description="Validate finishing processes on your actual parts before committing to equipment. Sample testing, prototype finishing, pilot batch validation, and small batch production support for metal components."
+        canonical="/services/manufacturing-validation"
+        keywords="sample testing metal, prototype finishing, process validation, small batch manufacturing, metal finishing validation"
+      />
               <Settings2 className="w-10 h-10 text-gray-700 mb-6" />
               <h3 className="text-xl font-bold tracking-tight mb-3 text-gray-900">Prototype Finishing</h3>
               <p className="text-gray-600 text-sm leading-relaxed">Support for R&D and NPI phases. We help dial in the surface finish requirements on engineering prototypes before you freeze the design.</p>

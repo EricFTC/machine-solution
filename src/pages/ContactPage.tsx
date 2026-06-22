@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import SEO from '../components/SEO';
 import { ArrowRight, UploadCloud } from 'lucide-react';
 import { PrimaryButton } from '../components/ui/Buttons';
 
