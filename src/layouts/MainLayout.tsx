@@ -61,7 +61,7 @@ export default function MainLayout() {
         <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
           <Link to="/" className="flex items-center gap-2 font-bold text-gray-900 text-2xl tracking-tight">
             <Cog className="w-8 h-8 text-accent-orange" />
-            Integrator<span className="text-accent-orange">.</span>
+            千面 Facet<span className="text-accent-orange">.</span>
           </Link>
           
           {/* Desktop nav */}
@@ -108,7 +108,7 @@ export default function MainLayout() {
         <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="flex items-center gap-2 font-bold text-gray-900 text-xl tracking-tight">
             <Cog className="w-6 h-6 text-accent-orange" />
-            Process Integrator
+            千面 Facet
           </div>
           <div className="flex flex-wrap gap-6 text-sm justify-center">
             <Link to="/solutions" className="hover:text-gray-900">Solutions</Link>
@@ -121,7 +121,7 @@ export default function MainLayout() {
             <Link to="/knowledge" className="hover:text-gray-900">Knowledge</Link>
             <Link to="/contact" className="hover:text-gray-900">Contact</Link>
           </div>
-          <p className="text-sm md:border-l md:border-gray-300 md:pl-6">&copy; {new Date().getFullYear()} Industrial Solutions.</p>
+          <p className="text-sm md:border-l md:border-gray-300 md:pl-6">&copy; {new Date().getFullYear()} 千面 Facet.</p>
         </div>
       </footer>
 
