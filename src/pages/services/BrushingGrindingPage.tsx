@@ -24,7 +24,7 @@ export default function BrushingGrindingPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link to="/contact"><PrimaryButton className="px-8 py-4 h-auto text-lg shadow-md">Request Grinding Evaluation <ArrowRight className="w-5 h-5 ml-2" /></PrimaryButton></Link>
-              <span className="text-sm text-gray-500 font-medium self-center">Free engineering evaluation</span>
+              <span className="text-sm text-gray-500 font-medium self-center">Engineering evaluation available</span>
             </div>
           </div>
         </div>

@@ -9,7 +9,7 @@ export default function PolishingPage() {
     <div className="bg-white min-h-screen">
       <SEO
         title="Metal Polishing Service — Mirror Finish & Fine Polishing"
-        description="Professional metal polishing and mirror finishing service. Achieve #4 to #8 finish quality on stainless steel, aluminum, and more. Ra/Rz validated results. Free sample processing available."
+        description="Professional metal polishing and mirror finishing service. Achieve #4 to #8 finish quality on stainless steel, aluminum, and more. Ra/Rz validated results. Sample processing available."
         canonical="/services/polishing"
         keywords="metal polishing service, mirror polishing, stainless steel polishing, aluminum polishing, mirror finish, Ra improvement, metal surface polishing"
       />
@@ -24,7 +24,7 @@ export default function PolishingPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link to="/contact"><PrimaryButton className="px-8 py-4 h-auto text-lg shadow-md">Request Sample Processing <ArrowRight className="w-5 h-5 ml-2" /></PrimaryButton></Link>
-              <span className="text-sm text-gray-500 font-medium self-center">Free engineering evaluation</span>
+              <span className="text-sm text-gray-500 font-medium self-center">Engineering evaluation available</span>
             </div>
           </div>
         </div>

@@ -9,7 +9,7 @@ export default function DeburringPage() {
     <div className="bg-white min-h-screen">
       <SEO
         title="Metal Deburring Service — Edge Radiusing & Burr Removal"
-        description="Professional metal deburring and edge radiusing service. Remove burrs from stamped, laser-cut, and machined parts. Uniform edge quality for safe handling, coating, and assembly. Free engineering evaluation."
+        description="Professional metal deburring and edge radiusing service. Remove burrs from stamped, laser-cut, and machined parts. Uniform edge quality for safe handling, coating, and assembly. Engineering evaluation available."
         canonical="/services/deburring"
         keywords="metal deburring service, burr removal, edge radiusing, deburring stamped parts, laser cut deburring, CNC deburring, metal edge finishing"
       />
@@ -142,7 +142,7 @@ export default function DeburringPage() {
             Need Burrs Removed From Your Parts?
           </h2>
           <p className="text-lg text-gray-600 mb-8">
-            Send us your part drawing or sample. We'll evaluate the burr type and recommend the right deburring process — no charge for initial evaluation.
+            Send us your part drawing or sample. We'll evaluate the burr type and recommend the right deburring process — initial evaluation available.
           </p>
           <Link to="/contact">
             <PrimaryButton className="px-12 py-5 h-auto text-lg shadow-md hover:-translate-y-1 transition-transform">

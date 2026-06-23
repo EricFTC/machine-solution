@@ -17,6 +17,9 @@ import DeburringPage from "./pages/services/DeburringPage";
 import PolishingPage from "./pages/services/PolishingPage";
 import BrushingGrindingPage from "./pages/services/BrushingGrindingPage";
 
+// Contract manufacturing
+import ContractManufacturingPage from "./pages/services/ContractManufacturingPage";
+
 // Industry pages
 import AutomotivePage from "./pages/industries/AutomotivePage";
 import AerospacePage from "./pages/industries/AerospacePage";
@@ -43,6 +46,7 @@ export default function App() {
           <Route path="services/deburring" element={<DeburringPage />} />
           <Route path="services/polishing" element={<PolishingPage />} />
           <Route path="services/brushing-grinding" element={<BrushingGrindingPage />} />
+          <Route path="services/contract-manufacturing" element={<ContractManufacturingPage />} />
           <Route path="industries/automotive" element={<AutomotivePage />} />
           <Route path="industries/aerospace" element={<AerospacePage />} />
           <Route path="industries/construction" element={<ConstructionPage />} />

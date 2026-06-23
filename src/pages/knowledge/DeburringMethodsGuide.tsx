@@ -206,7 +206,7 @@ export default function DeburringMethodsGuide() {
 
           <div className="bg-orange-50 border border-orange-100 rounded-xl p-8 mt-12">
             <h3 className="text-xl font-bold text-gray-900 mb-3">Not Sure Which Method Fits Your Parts?</h3>
-            <p className="text-gray-600 mb-4">Send us your part drawing and we'll recommend the right deburring process — no charge for the initial evaluation.</p>
+            <p className="text-gray-600 mb-4">Send us your part drawing and we'll recommend the right deburring process — initial evaluation available.</p>
             <Link to="/contact" className="inline-flex items-center font-bold text-accent-orange hover:text-gray-900 transition-colors">
               Get Free Evaluation <ArrowRight className="w-4 h-4 ml-2" />
             </Link>

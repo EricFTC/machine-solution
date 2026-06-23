@@ -43,6 +43,7 @@ export default function MainLayout() {
     { name: '→ Deburring Service', path: '/services/deburring' },
     { name: '→ Polishing Service', path: '/services/polishing' },
     { name: '→ Brush & Grinding Service', path: '/services/brushing-grinding' },
+    { name: '→ Contract Manufacturing', path: '/services/contract-manufacturing' },
   ];
 
   const industryItems = [
@@ -114,6 +115,7 @@ export default function MainLayout() {
             <Link to="/services/deburring" className="hover:text-gray-900">Deburring</Link>
             <Link to="/services/polishing" className="hover:text-gray-900">Polishing</Link>
             <Link to="/services/brushing-grinding" className="hover:text-gray-900">Grinding</Link>
+            <Link to="/services/contract-manufacturing" className="hover:text-gray-900">Contract Mfg</Link>
             <Link to="/industries/automotive" className="hover:text-gray-900">Automotive</Link>
             <Link to="/industries/aerospace" className="hover:text-gray-900">Aerospace</Link>
             <Link to="/knowledge" className="hover:text-gray-900">Knowledge</Link>

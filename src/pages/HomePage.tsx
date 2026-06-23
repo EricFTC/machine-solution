@@ -227,8 +227,8 @@ export default function HomePage() {
                     <div>
                       <h4 className="text-lg font-bold text-gray-900 mb-2">2. Contract Manufacturing</h4>
                       <p className="text-gray-600 leading-relaxed text-sm">Don't want to buy equipment? We process your prototypes or high-volume production orders.</p>
-                      <Link to="/services/manufacturing-validation" className="inline-block mt-3 text-sm font-bold text-gray-500 uppercase tracking-widest group-hover:text-accent-orange transition-colors">
-                        Explore Production &rarr;
+                      <Link to="/services/contract-manufacturing" className="inline-block mt-3 text-sm font-bold text-gray-500 uppercase tracking-widest group-hover:text-accent-orange transition-colors">
+                        Explore Contract Mfg &rarr;
                       </Link>
                     </div>
                   </div>
