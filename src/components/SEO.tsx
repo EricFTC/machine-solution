@@ -10,7 +10,7 @@ interface SEOProps {
 const SITE_URL = 'https://animated-vacherin-dc0614.netlify.app';
 
 export default function SEO({ title, description, canonical, keywords }: SEOProps) {
-  const fullTitle = `${title} | 千面 Facet — Metal Surface Finishing`;
+  const fullTitle = `${title} | Facet — Metal Surface Finishing`;
   const url = canonical ? `${SITE_URL}${canonical}` : SITE_URL;
 
   return (
@@ -25,7 +25,7 @@ export default function SEO({ title, description, canonical, keywords }: SEOProp
       <meta property="og:description" content={description} />
       <meta property="og:type" content="website" />
       <meta property="og:url" content={url} />
-      <meta property="og:site_name" content="千面 Facet" />
+      <meta property="og:site_name" content="Facet" />
 
       {/* Twitter Card */}
       <meta name="twitter:card" content="summary_large_image" />
