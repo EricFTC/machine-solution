@@ -82,9 +82,9 @@ export default function HomePage() {
             className="relative lg:h-[500px] w-full rounded shadow-xl overflow-hidden border border-gray-200 bg-gray-100"
           >
             <img 
-              src="/2b1f2682-c68a-4c8e-b2dc-d034a150693c.png" 
-              alt="Engineering thinking and process flow" 
-              className="object-cover w-full h-full grayscale-[20%]"
+              src="/images/facet-banner.png" 
+              alt="Facet — Solutions From Process Development to Production" 
+              className="object-cover w-full h-full"
             />
           </motion.div>
         </div>
