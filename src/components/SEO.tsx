@@ -7,7 +7,7 @@ interface SEOProps {
   keywords?: string;
 }
 
-const SITE_URL = 'https://animated-vacherin-dc0614.netlify.app';
+const SITE_URL = 'https://facetfin.com';
 
 export default function SEO({ title, description, canonical, keywords }: SEOProps) {
   const fullTitle = `${title} | Facet — Metal Surface Finishing`;

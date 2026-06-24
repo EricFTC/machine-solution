@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import SEO from '../components/SEO';
-import { ArrowRight, UploadCloud } from 'lucide-react';
+import { ArrowRight, UploadCloud, Mail } from 'lucide-react';
 import { PrimaryButton } from '../components/ui/Buttons';
 
 export default function ContactPage() {
@@ -185,7 +185,16 @@ export default function ContactPage() {
           </form>
         </div>
         
-        <div className="mt-8 text-center text-sm font-medium text-gray-500">
+        <div className="mt-8 bg-white border border-gray-200 rounded-xl p-8 text-center">
+          <div className="flex items-center justify-center gap-3 mb-3">
+            <Mail className="w-5 h-5 text-accent-orange" />
+            <span className="font-bold text-gray-900">Or email us directly</span>
+          </div>
+          <a href="mailto:eric@facetfin.com" className="text-accent-orange hover:underline text-lg font-semibold">eric@facetfin.com</a>
+          <p className="text-gray-500 text-sm mt-2">We typically respond within 24 hours on business days.</p>
+        </div>
+        
+        <div className="mt-4 text-center text-sm font-medium text-gray-500">
           Your information is secure. We use it solely for engineering evaluation purposes.
         </div>
       </div>

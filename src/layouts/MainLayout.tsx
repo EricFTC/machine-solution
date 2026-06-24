@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Outlet, Link, useLocation } from "react-router-dom";
-import { Cog, ChevronDown } from "lucide-react";
+import { Cog, ChevronDown, Mail } from "lucide-react";
 import { cn } from "../lib/utils";
 
 const WhatsAppIcon = ({ className }: { className?: string }) => (
@@ -119,6 +119,7 @@ export default function MainLayout() {
             <Link to="/industries/automotive" className="hover:text-gray-900">Automotive</Link>
             <Link to="/industries/aerospace" className="hover:text-gray-900">Aerospace</Link>
             <Link to="/knowledge" className="hover:text-gray-900">Knowledge</Link>
+            <a href="mailto:eric@facetfin.com" className="hover:text-gray-900 flex items-center gap-1"><Mail className="w-3.5 h-3.5" />Email</a>
             <Link to="/contact" className="hover:text-gray-900">Contact</Link>
           </div>
           <p className="text-sm md:border-l md:border-gray-300 md:pl-6">&copy; {new Date().getFullYear()} Facet.</p>
