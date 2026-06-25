@@ -9,11 +9,21 @@ export default function HomePage() {
   return (
     <div className="flex flex-col bg-base-bg text-base-text font-sans">
       
-      {/* SECTION 1 - HERO */}
-      <section className="relative pt-20 pb-24 md:pt-32 md:pb-32 overflow-hidden border-b border-base-border bg-white">
-        <div className="max-w-7xl mx-auto px-6 relative z-10 grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
-          
-          <div className="text-left">
+            {/* SECTION 1 - HERO */}
+      <section className="relative overflow-hidden border-b border-base-border bg-white">
+        
+        {/* Full-width Banner */}
+        <div className="w-full">
+          <img 
+            src="/images/facet-banner-wide.png" 
+            alt="FACET — Surface Finishing Solutions" 
+            className="w-full h-auto object-cover"
+          />
+        </div>
+
+        {/* Hero Text Content */}
+        <div className="max-w-7xl mx-auto px-6 py-16 md:py-20">
+          <div className="max-w-3xl">
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -27,7 +37,7 @@ export default function HomePage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="text-4xl md:text-5xl lg:text-6xl font-black text-gray-900 leading-tight mb-6 tracking-tight max-w-3xl"
+              className="text-4xl md:text-5xl lg:text-6xl font-black text-gray-900 leading-tight mb-6 tracking-tight"
             >
               Solutions From Process Development to Production
             </motion.h1>
@@ -37,10 +47,10 @@ export default function HomePage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
             >
-              <p className="text-lg md:text-xl text-gray-600 mb-4 max-w-2xl leading-relaxed font-bold">
+              <p className="text-lg md:text-xl text-gray-600 mb-4 leading-relaxed font-bold">
                 Send your drawing, sample photo, or application challenge.
               </p>
-              <p className="text-lg text-gray-600 mb-8 max-w-2xl leading-relaxed">
+              <p className="text-lg text-gray-600 mb-8 leading-relaxed">
                 Whether you need process development, production support, or equipment recommendations, we help identify the most practical path forward.
               </p>
             </motion.div>
@@ -74,23 +84,10 @@ export default function HomePage() {
               <span className="flex items-center gap-1.5"><CheckCircle2 className="w-4 h-4 text-accent-orange" /> Process-first approach</span>
             </motion.div>
           </div>
-
-          <motion.div 
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="relative lg:h-[500px] w-full rounded shadow-xl overflow-hidden border border-gray-200 bg-gray-100"
-          >
-            <img 
-              src="/2b1f2682-c68a-4c8e-b2dc-d034a150693c.png" 
-              alt="Engineering thinking and process flow" 
-              className="object-cover w-full h-full grayscale-[20%]"
-            />
-          </motion.div>
         </div>
       </section>
 
-      {/* NEW SECTION - HOW WE SUPPORT YOUR PROJECT */}
+{/* NEW SECTION - HOW WE SUPPORT YOUR PROJECT */}
       <section className="py-24 bg-gray-50 border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-6">
           <div className="mb-20 text-center">
