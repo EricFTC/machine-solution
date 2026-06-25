@@ -14,8 +14,8 @@ function NavDropdown({ label, items, isActive }: { label: string; items: { name:
   return (
     <div className="relative" onMouseEnter={() => setOpen(true)} onMouseLeave={() => setOpen(false)}>
       <button className={cn(
-        "transition-colors hover:text-white flex items-center gap-1 font-medium text-sm text-white/90",
-        isActive ? "text-white font-semibold" : "text-white/90"
+        "transition-colors hover:text-gray-900 flex items-center gap-1 font-medium text-sm",
+        isActive ? "text-gray-900 font-semibold" : "text-gray-500"
       )}>
         {label} <ChevronDown className={cn("w-3 h-3 transition-transform", open && "rotate-180")} />
       </button>
@@ -57,25 +57,26 @@ export default function MainLayout() {
 
   return (
     <div className="min-h-screen bg-base-bg text-base-text font-sans selection:bg-accent-orange selection:text-white flex flex-col relative">
-      <header className="border-b border-gray-200 py-4 sticky top-0 z-[60]" style={{backgroundImage: "url(/images/facet-banner-wide.png)", backgroundSize: "cover", backgroundPosition: "center"}}>
+      <header className="bg-white border-b border-gray-200 py-4 sticky top-0 z-[60]">
         <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
-          <Link to="/" className="font-bold text-white text-2xl tracking-tight">
-            FACET
+          <Link to="/" className="flex items-center gap-2 font-bold text-gray-900 text-2xl tracking-tight">
+            <Cog className="w-8 h-8 text-accent-orange" />
+            Facet<span className="text-accent-orange">.</span>
           </Link>
           
           {/* Desktop nav */}
-          <div className="hidden lg:flex gap-8 items-center font-medium text-sm text-white/90">
-            <Link to="/solutions" className={cn("transition-colors hover:text-white", location.pathname === '/solutions' && "text-white font-semibold")}>Solutions</Link>
+          <div className="hidden lg:flex gap-8 items-center font-medium text-sm text-gray-500">
+            <Link to="/solutions" className={cn("transition-colors hover:text-gray-900", location.pathname === '/solutions' && "text-gray-900 font-semibold")}>Solutions</Link>
             <NavDropdown label="Services" items={serviceItems} isActive={isServicesActive} />
             <NavDropdown label="Industries" items={industryItems} isActive={isIndustriesActive} />
-            <Link to="/cases" className={cn("transition-colors hover:text-white", location.pathname === '/cases' && "text-white font-semibold")}>Cases</Link>
-            <Link to="/knowledge" className={cn("transition-colors hover:text-white", location.pathname === '/knowledge' && "text-white font-semibold")}>Knowledge</Link>
-            <Link to="/advanced-surface-technologies" className={cn("transition-colors hover:text-white", location.pathname === '/advanced-surface-technologies' && "text-white font-semibold")}>R&D</Link>
-            <Link to="/contact" className="bg-white hover:bg-gray-100 text-gray-900 font-bold py-2 px-6 rounded transition-colors !text-sm">Contact</Link>
+            <Link to="/cases" className={cn("transition-colors hover:text-gray-900", location.pathname === '/cases' && "text-gray-900 font-semibold")}>Cases</Link>
+            <Link to="/knowledge" className={cn("transition-colors hover:text-gray-900", location.pathname === '/knowledge' && "text-gray-900 font-semibold")}>Knowledge</Link>
+            <Link to="/advanced-surface-technologies" className={cn("transition-colors hover:text-gray-900", location.pathname === '/advanced-surface-technologies' && "text-gray-900 font-semibold")}>R&D</Link>
+            <Link to="/contact" className="bg-accent-orange hover:bg-accent-orange-hover text-white font-bold py-2 px-6 rounded transition-colors !text-sm">Contact</Link>
           </div>
 
           {/* Mobile menu button */}
-          <button className="lg:hidden p-2 text-white" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
+          <button className="lg:hidden p-2 text-gray-600" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" /></svg>
           </button>
         </div>
