@@ -12,15 +12,6 @@ export default function HomePage() {
             {/* SECTION 1 - HERO */}
       <section className="relative overflow-hidden border-b border-base-border bg-white">
         
-        {/* Full-width Banner */}
-        <div className="w-full">
-          <img 
-            src="/images/facet-banner-wide.png" 
-            alt="FACET — Surface Finishing Solutions" 
-            className="w-full h-auto object-cover"
-          />
-        </div>
-
         {/* Hero Text Content */}
         <div className="max-w-7xl mx-auto px-6 py-16 md:py-20">
           <div className="max-w-3xl">
