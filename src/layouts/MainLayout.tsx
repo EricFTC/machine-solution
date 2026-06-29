@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Outlet, Link, useLocation } from "react-router-dom";
-import { Cog, ChevronDown, Mail } from "lucide-react";
+import { ChevronDown, Mail } from "lucide-react";
 import { cn } from "../lib/utils";
 
 const WhatsAppIcon = ({ className }: { className?: string }) => (
@@ -14,8 +14,8 @@ function NavDropdown({ label, items, isActive }: { label: string; items: { name:
   return (
     <div className="relative" onMouseEnter={() => setOpen(true)} onMouseLeave={() => setOpen(false)}>
       <button className={cn(
-        "transition-colors hover:text-gray-900 flex items-center gap-1 font-medium text-sm",
-        isActive ? "text-gray-900 font-semibold" : "text-gray-500"
+        "transition-colors hover:text-white flex items-center gap-1 font-medium text-sm",
+        isActive ? "text-white font-semibold" : "text-white/80"
       )}>
         {label} <ChevronDown className={cn("w-3 h-3 transition-transform", open && "rotate-180")} />
       </button>
@@ -57,45 +57,48 @@ export default function MainLayout() {
 
   return (
     <div className="min-h-screen bg-base-bg text-base-text font-sans selection:bg-accent-orange selection:text-white flex flex-col relative">
-      <header className="bg-white border-b border-gray-200 py-4 sticky top-0 z-[60]">
-        <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
-          <Link to="/" className="flex items-center gap-2 font-bold text-gray-900 text-2xl tracking-tight">
-            <Cog className="w-8 h-8 text-accent-orange" />
-            Facet<span className="text-accent-orange">.</span>
-          </Link>
+      {/* Navbar with banner background */}
+      <header className="relative bg-cover bg-center bg-no-repeat py-3 sticky top-0 z-[60]" style={{ backgroundImage: 'url(/images/facet-banner-wide.png)', backgroundSize: 'cover' }}>
+        {/* Overlay for better text readability */}
+        <div className="absolute inset-0 bg-black/30 pointer-events-none"></div>
+        
+        <div className="relative max-w-7xl mx-auto px-6 flex justify-between items-center">
+          {/* No logo - banner serves as brand */}
+          <div className="w-24 lg:w-48"></div>
           
           {/* Desktop nav */}
-          <div className="hidden lg:flex gap-8 items-center font-medium text-sm text-gray-500">
-            <Link to="/solutions" className={cn("transition-colors hover:text-gray-900", location.pathname === '/solutions' && "text-gray-900 font-semibold")}>Solutions</Link>
+          <div className="hidden lg:flex gap-8 items-center font-medium text-sm text-white/90">
+            <Link to="/solutions" className={cn("transition-colors hover:text-white", location.pathname === '/solutions' && "text-white font-semibold")}>Solutions</Link>
             <NavDropdown label="Services" items={serviceItems} isActive={isServicesActive} />
             <NavDropdown label="Industries" items={industryItems} isActive={isIndustriesActive} />
-            <Link to="/cases" className={cn("transition-colors hover:text-gray-900", location.pathname === '/cases' && "text-gray-900 font-semibold")}>Cases</Link>
-            <Link to="/knowledge" className={cn("transition-colors hover:text-gray-900", location.pathname === '/knowledge' && "text-gray-900 font-semibold")}>Knowledge</Link>
-            <Link to="/advanced-surface-technologies" className={cn("transition-colors hover:text-gray-900", location.pathname === '/advanced-surface-technologies' && "text-gray-900 font-semibold")}>R&D</Link>
-            <Link to="/contact" className="bg-accent-orange hover:bg-accent-orange-hover text-white font-bold py-2 px-6 rounded transition-colors !text-sm">Contact</Link>
+            <Link to="/cases" className={cn("transition-colors hover:text-white", location.pathname === '/cases' && "text-white font-semibold")}>Cases</Link>
+            <Link to="/knowledge" className={cn("transition-colors hover:text-white", location.pathname === '/knowledge' && "text-white font-semibold")}>Knowledge</Link>
+            <Link to="/advanced-surface-technologies" className={cn("transition-colors hover:text-white", location.pathname === '/advanced-surface-technologies' && "text-white font-semibold")}>R&D</Link>
+            <Link to="/contact" className="bg-white hover:bg-gray-100 text-gray-900 font-bold py-2 px-6 rounded transition-colors !text-sm">Contact</Link>
           </div>
 
           {/* Mobile menu button */}
-          <button className="lg:hidden p-2 text-gray-600" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
+          <button className="lg:hidden p-2 text-white" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" /></svg>
           </button>
         </div>
 
         {/* Mobile menu */}
         {mobileMenuOpen && (
-          <div className="lg:hidden border-t border-gray-200 bg-white px-6 py-4 space-y-3">
-            <Link to="/solutions" className="block py-2 text-gray-700 font-medium" onClick={() => setMobileMenuOpen(false)}>Solutions</Link>
-            <div className="pl-4 space-y-2 border-l-2 border-gray-200">
-              <span className="block text-xs font-bold uppercase tracking-widest text-gray-400 pt-2">Services</span>
-              {serviceItems.map(i => <Link key={i.path} to={i.path} className="block py-1 text-sm text-gray-600" onClick={() => setMobileMenuOpen(false)}>{i.name}</Link>)}
+          <div className="lg:hidden border-t border-white/20 bg-black/50 backdrop-blur-sm px-6 py-4 space-y-3">
+            <Link to="/solutions" className="block py-2 text-white font-medium" onClick={() => setMobileMenuOpen(false)}>Solutions</Link>
+            <div className="pl-4 space-y-2 border-l-2 border-white/20">
+              <span className="block text-xs font-bold uppercase tracking-widest text-white/60 pt-2">Services</span>
+              {serviceItems.map(i => <Link key={i.path} to={i.path} className="block py-1 text-sm text-white/80" onClick={() => setMobileMenuOpen(false)}>{i.name}</Link>)}
             </div>
-            <div className="pl-4 space-y-2 border-l-2 border-gray-200">
-              <span className="block text-xs font-bold uppercase tracking-widest text-gray-400 pt-2">Industries</span>
-              {industryItems.map(i => <Link key={i.path} to={i.path} className="block py-1 text-sm text-gray-600" onClick={() => setMobileMenuOpen(false)}>{i.name}</Link>)}
+            <div className="pl-4 space-y-2 border-l-2 border-white/20">
+              <span className="block text-xs font-bold uppercase tracking-widest text-white/60 pt-2">Industries</span>
+              {industryItems.map(i => <Link key={i.path} to={i.path} className="block py-1 text-sm text-white/80" onClick={() => setMobileMenuOpen(false)}>{i.name}</Link>)}
             </div>
-            <Link to="/cases" className="block py-2 text-gray-700 font-medium" onClick={() => setMobileMenuOpen(false)}>Cases</Link>
-            <Link to="/knowledge" className="block py-2 text-gray-700 font-medium" onClick={() => setMobileMenuOpen(false)}>Knowledge</Link>
-            <Link to="/contact" className="block py-2 text-accent-orange font-bold" onClick={() => setMobileMenuOpen(false)}>Contact</Link>
+            <Link to="/cases" className="block py-2 text-white font-medium" onClick={() => setMobileMenuOpen(false)}>Cases</Link>
+            <Link to="/knowledge" className="block py-2 text-white font-medium" onClick={() => setMobileMenuOpen(false)}>Knowledge</Link>
+            <Link to="/advanced-surface-technologies" className="block py-2 text-white font-medium" onClick={() => setMobileMenuOpen(false)}>R&D</Link>
+            <Link to="/contact" className="block py-2 text-white font-bold" onClick={() => setMobileMenuOpen(false)}>Contact</Link>
           </div>
         )}
       </header>
@@ -107,7 +110,6 @@ export default function MainLayout() {
       <footer className="bg-white py-12 border-t border-gray-200 text-center text-gray-500 relative z-10">
         <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="flex items-center gap-2 font-bold text-gray-900 text-xl tracking-tight">
-            <Cog className="w-6 h-6 text-accent-orange" />
             Facet
           </div>
           <div className="flex flex-wrap gap-6 text-sm justify-center">
