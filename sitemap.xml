@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://facetfin.com/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://facetfin.com/solutions</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://facetfin.com/services</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://facetfin.com/services/process-consulting</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://facetfin.com/services/manufacturing-validation</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://facetfin.com/services/equipment-solutions</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://facetfin.com/services/deburring</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://facetfin.com/services/polishing</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://facetfin.com/services/brushing-grinding</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://facetfin.com/industries/automotive</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://facetfin.com/industries/aerospace</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://facetfin.com/industries/construction</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://facetfin.com/cases</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://facetfin.com/knowledge</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://facetfin.com/knowledge/deburring-methods-guide</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://facetfin.com/knowledge/surface-roughness-guide</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://facetfin.com/knowledge/brushed-vs-mirror-finish</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://facetfin.com/knowledge/automate-finishing-process</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://facetfin.com/knowledge/stainless-steel-finishing</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://facetfin.com/advanced-surface-technologies</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://facetfin.com/contact</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url>
+    <loc>https://facetfin.com/services/contract-manufacturing</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+</urlset>
