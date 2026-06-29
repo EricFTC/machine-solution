@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://animated-vacherin-dc0614.netlify.app/sitemap.xml
