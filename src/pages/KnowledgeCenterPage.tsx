@@ -1,9 +1,57 @@
 import SEO from '../components/SEO';
 import React from 'react';
-import { ArrowRight, BookOpen, Wrench, Ruler, Scale, Zap, Shield } from 'lucide-react';
+import { ArrowRight, BookOpen, Wrench, Ruler, Scale, Zap, Shield, BookOpenText, Layers, BarChart3, CircleDot, Search, TrendingUp } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const articles = [
+  {
+    icon: BookOpenText,
+    category: 'SF101',
+    title: 'Surface Finishing Is a Process Chain',
+    description: 'Understanding Surface Finishing as a complete system with 46+ processes. Learn the Tom Bell classification: surface modification vs. coating, and why process chain design matters.',
+    slug: 'surface-finishing-process-chain',
+    readTime: '6 min',
+  },
+  {
+    icon: Layers,
+    category: 'SF101',
+    title: '46 Processes in One Overview: Which Path Should Your Workpiece Take?',
+    description: 'All 46+ surface finishing processes organized into four major categories: mechanical, chemical/electrochemical, coating/deposition, and combined. Selection logic included.',
+    slug: 'forty-six-processes-overview',
+    readTime: '8 min',
+  },
+  {
+    icon: BarChart3,
+    category: 'SF101',
+    title: 'Ra/Rz/Rq/GU Decoded — Get the Parameters Wrong, and You\'ve Wasted the Process',
+    description: 'Complete guide to surface finishing parameters. What Ra, Rz, Rq, and GU actually mean, when to use each, and why lower Ra is not always better.',
+    slug: 'ra-rz-gu-parameters-decoded',
+    readTime: '7 min',
+  },
+  {
+    icon: CircleDot,
+    category: 'SF101',
+    title: 'Abrasive Selection Quick Reference: Al₂O₃, SiC, Diamond, and CBN',
+    description: 'Abrasive-material matching for 7 common materials. Diamond vs. CBN, FEPA grit-to-Ra correlation chart, and equipment selection framework.',
+    slug: 'abrasives-selection-guide',
+    readTime: '8 min',
+  },
+  {
+    icon: Search,
+    category: 'SF101',
+    title: 'Surface Inspection: How to Verify Your Finish Actually Passes Spec',
+    description: 'Contact vs. non-contact roughness measurement, gloss measurement angle selection, and inspection standards quick reference for shop-floor and lab use.',
+    slug: 'surface-inspection-guide',
+    readTime: '7 min',
+  },
+  {
+    icon: TrendingUp,
+    category: 'SF101',
+    title: 'Four Trends Reshaping the Surface Finishing Industry in 2026',
+    description: 'Market data, automation & AI, environmental compliance (GB 37822-2024), and digital transformation—four forces reshaping the industry in 2026.',
+    slug: 'surface-finishing-2026-trends',
+    readTime: '6 min',
+  },
   {
     icon: Wrench,
     category: 'Deburring',
@@ -94,7 +142,7 @@ export default function KnowledgeCenterPage() {
                       {article.description}
                     </p>
                     <div className="mt-4">
-                      <Link to="/contact" className="inline-flex items-center text-sm font-bold text-gray-500 hover:text-accent-orange transition-colors uppercase tracking-widest">
+                      <Link to={`/knowledge/${article.slug}`} className="inline-flex items-center text-sm font-bold text-gray-500 hover:text-accent-orange transition-colors uppercase tracking-widest">
                         Read Article <ArrowRight className="w-3 h-3 ml-1" />
                       </Link>
                     </div>
