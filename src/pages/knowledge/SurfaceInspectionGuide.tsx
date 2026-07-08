@@ -66,8 +66,8 @@ export default function SurfaceInspectionGuide() {
               <thead className="bg-gray-100"><tr><th className="px-4 py-3 text-left text-xs font-bold text-gray-600 uppercase tracking-wider">Measurement Angle</th><th className="px-4 py-3 text-left text-xs font-bold text-gray-600 uppercase tracking-wider">Application Range</th><th className="px-4 py-3 text-left text-xs font-bold text-gray-600 uppercase tracking-wider">Typical Scenarios</th></tr></thead>
               <tbody className="divide-y divide-gray-200">
 <tr><td className="px-4 py-3 text-sm text-gray-700">60°</td><td className="px-4 py-3 text-sm text-gray-700">General purpose (10–70 GU)</td><td className="px-4 py-3 text-sm text-gray-700">Standard appliance housings, ceramic glazes, general coatings</td></tr>
-<tr><td className="px-4 py-3 text-sm text-gray-700">20°</td><td className="px-4 py-3 text-sm text-gray-700">High-gloss surfaces (>70 GU @60°)</td><td className="px-4 py-3 text-sm text-gray-700">Automotive clear coats, electroplated parts, piano lacquer</td></tr>
-<tr><td className="px-4 py-3 text-sm text-gray-700">85°</td><td className="px-4 py-3 text-sm text-gray-700">Low-gloss / matte surfaces (<10 GU @60°)</td><td className="px-4 py-3 text-sm text-gray-700">Matte coatings, textured plastics, flat wall paints</td></tr>
+<tr><td className="px-4 py-3 text-sm text-gray-700">20°</td><td className="px-4 py-3 text-sm text-gray-700">High-gloss surfaces ({">"}70 GU @60°)</td><td className="px-4 py-3 text-sm text-gray-700">Automotive clear coats, electroplated parts, piano lacquer</td></tr>
+<tr><td className="px-4 py-3 text-sm text-gray-700">85°</td><td className="px-4 py-3 text-sm text-gray-700">Low-gloss / matte surfaces ({"<"}10 GU @60°)</td><td className="px-4 py-3 text-sm text-gray-700">Matte coatings, textured plastics, flat wall paints</td></tr>
               </tbody>
             </table>
           </div>
@@ -95,7 +95,7 @@ export default function SurfaceInspectionGuide() {
             <h3 className="text-xl font-bold text-gray-900 mb-4">Key Takeaways</h3>
           <ol className="list-decimal list-inside space-y-3 text-gray-700">
             <li><strong>Surface roughness inspection has two main camps: contact stylus methods and non-contact optical methods.</strong> Stylus is the shop-floor workhorse—portable, economical. Optical is the precision lab tool—non-destructive, 3D capable.</li>
-            <li><strong>The first step in gloss inspection is choosing the right angle.</strong> Start at 60°; use 20° for readings > 70 GU; use 85° for readings &lt; 10 GU. Reports must state the measurement angle.</li>
+            <li><strong>The first step in gloss inspection is choosing the right angle.</strong> Start at 60°; use 20° for readings {">"} 70 GU; use 85° for readings &lt; 10 GU. Reports must state the measurement angle.</li>
             <li><strong>Inspection standards are the industry's common language.</strong> GB/T 1031 for general machinery, ISO 25178 for 3D areal parameters, ISO 2813 for gloss. Reference the right standard, and your data carries weight.</li>
           </ol>
           </div>
