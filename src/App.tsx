@@ -25,6 +25,14 @@ import AutomotivePage from "./pages/industries/AutomotivePage";
 import AerospacePage from "./pages/industries/AerospacePage";
 import ConstructionPage from "./pages/industries/ConstructionPage";
 
+// Knowledge articles - SF101 Series
+import SurfaceFinishingProcessChain from "./pages/knowledge/SurfaceFinishingProcessChain";
+import FortySixProcessesOverview from "./pages/knowledge/FortySixProcessesOverview";
+import RaRzGuParametersDecoded from "./pages/knowledge/RaRzGuParametersDecoded";
+import AbrasivesSelectionGuide from "./pages/knowledge/AbrasivesSelectionGuide";
+import SurfaceInspectionGuide from "./pages/knowledge/SurfaceInspectionGuide";
+import SurfaceFinishing2026Trends from "./pages/knowledge/SurfaceFinishing2026Trends";
+
 // Knowledge articles
 import DeburringMethodsGuide from "./pages/knowledge/DeburringMethodsGuide";
 import SurfaceRoughnessGuide from "./pages/knowledge/SurfaceRoughnessGuide";
@@ -52,6 +60,14 @@ export default function App() {
           <Route path="industries/construction" element={<ConstructionPage />} />
           <Route path="cases" element={<CaseStudies />} />
           <Route path="knowledge" element={<KnowledgeCenterPage />} />
+          {/* SF101 Series */}
+          <Route path="knowledge/surface-finishing-process-chain" element={<SurfaceFinishingProcessChain />} />
+          <Route path="knowledge/forty-six-processes-overview" element={<FortySixProcessesOverview />} />
+          <Route path="knowledge/ra-rz-gu-parameters-decoded" element={<RaRzGuParametersDecoded />} />
+          <Route path="knowledge/abrasives-selection-guide" element={<AbrasivesSelectionGuide />} />
+          <Route path="knowledge/surface-inspection-guide" element={<SurfaceInspectionGuide />} />
+          <Route path="knowledge/surface-finishing-2026-trends" element={<SurfaceFinishing2026Trends />} />
+          {/* Existing articles */}
           <Route path="knowledge/deburring-methods-guide" element={<DeburringMethodsGuide />} />
           <Route path="knowledge/surface-roughness-guide" element={<SurfaceRoughnessGuide />} />
           <Route path="knowledge/brushed-vs-mirror-finish" element={<BrushedVsMirrorFinish />} />
